@@ -18,7 +18,7 @@ const LoginPage = () => {
     const data = { userName, password };
 
     try {
-      const response = await fetch(url + "/login", {
+      const response = await fetch(new URL("/login", url), {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },
